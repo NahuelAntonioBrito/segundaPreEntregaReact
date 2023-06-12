@@ -1,0 +1,41 @@
+.imgProd{
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card{
+    width: 320px;
+    height: 340px;
+}
+
+.containerDescrip{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titulo{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.precioProd{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.buttonProd{
+    background-color: #263143;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor:pointer;
+}
