@@ -20,6 +20,7 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
         </Routes>
+        <ItemDetailContainer/>
       </div>
     </BrowserRouter>
   );

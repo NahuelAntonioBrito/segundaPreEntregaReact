@@ -25,20 +25,8 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <Container>
-                <nav>
-                    <ul>
-                        {categories.map((category) => {
-                            return(
-                                <li>
-                                    <NavLink to={`/category/${category.id}`}>
-                                        {`${category.name}`}
-                                    </NavLink>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </nav>
+            <h1>Catalogo de Productos</h1>
+            <Container className="contenedor">
                 <ItemList prods={tasks}/>
             </Container>
         </>

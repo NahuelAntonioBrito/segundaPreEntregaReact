@@ -4,3 +4,20 @@
     object-fit: cover;
     border-radius: 100%;
 }
+
+.menu{
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+.containerMenu{
+    position: sticky;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+
+

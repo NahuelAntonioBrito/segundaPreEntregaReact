@@ -1,2 +1,2 @@
 export {getCategories} from "./categories";
-export {getTasks, getTasksById} from "./tasks"
+export {getTasks, getTasksById} from "./tasks";

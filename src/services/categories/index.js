@@ -1,8 +1,8 @@
-import { categories } from "../../Async-mocks"
+import { tasks } from "../../Async-mocks"
 
 const getCategories = async () => {
     return new Promise((resolve, reject) => {
-        resolve(categories)
+        resolve(tasks.categoryId)
     });
 };
 

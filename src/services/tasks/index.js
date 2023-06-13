@@ -11,9 +11,9 @@ const getTasks = async (catId) => {
         }, 500)
     })
 };
-const getTasksById = async (itemId) =>{
+const getTasksById = async (itemId) => {
     return new Promise((resolve, reject) => {
-        resolve(tasks.find( (task) => task.id === itemId));
+        resolve(tasks.find((task) => task.id == itemId));
     });
 };
 

@@ -4,24 +4,25 @@ import Navbar from 'react-bootstrap/Navbar';
 import CarWidget from '../CartWidget/CartWidget';
 import logo from '../img/logo.jpg';
 import './NavBar.css';
-import { NavLink } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
+
+
 
 function ColorSchemesExample() {
     return (
         <>
-        <Navbar bg="dark" variant="dark">
-            <Container>
-                <Link to={`/`}><img className="logo" src = {logo} alt = "logo tienda"/></Link>
-                <Nav className="me-auto">
-                    <NavLink to={`/category/comic`}>Comics</NavLink>
-                    <NavLink to={`/category/manga`}>Mangas</NavLink>
-                    <NavLink to={`/category/anime`}>Animes</NavLink>
-                    <NavLink to={`/category/figura`}>Figuras</NavLink>
-                </Nav>
-                <CarWidget/>
-            </Container>
-        </Navbar>
+            <Navbar className='containerMenu' bg="dark" variant="dark">
+                <Container className='menuContainer'>
+                    <Link to={`/`}><img className="logo" src = {logo} alt = "logo tienda"/></Link>
+                    <Nav className="me-auto">
+                        <NavLink className="menu"  to={`/category/Comics`}>Comics</NavLink>
+                        <NavLink className="menu" to={`/category/Mangas`}>Mangas</NavLink>
+                        <NavLink className="menu" to={`/category/Animes`}>Animes</NavLink>
+                        <NavLink className="menu" to={`/category/Figuras`}>Figuras</NavLink>
+                    </Nav>
+                    <CarWidget/>
+                </Container>
+            </Navbar>
         </>
     );
 }

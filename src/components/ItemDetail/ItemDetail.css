@@ -5,8 +5,13 @@
     border-radius: 20px 20px 0px 0px;
 }
 
+.card{
+    width: 320px;
+    height: 340px;
+}
+
 .containerDescrip{
-    height: 260px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +19,7 @@
     gap: 15px;
 }
 
-.nombreProd{
-    padding: 10px;
+.titulo{
     font-size: 25px;
     font-weight: 300;
 }
@@ -34,8 +38,4 @@
     font-size: 17px;
     font-weight: 300;
     cursor:pointer;
-}
-
-.buttonProd :hover{
-    background-color: #2D4263;
 }
