@@ -1,6 +1,6 @@
 export const tasks = [
     {
-        id:'0',
+        id: 0,
         nombre:'Spiderman la última cacería de kraven',
         img:'https://m.media-amazon.com/images/I/513jVgYbfTL.jpg',
         categoryId: 'Comics',
@@ -10,7 +10,7 @@ export const tasks = [
     },
 
     {
-        id:'1',
+        id:1,
         nombre:'One Piece vol 1',
         img:'https://image.pmgstatic.com/cache/resized/w420/files/images/film/posters/159/551/159551114_09283c.jpg',
         categoryId: 'Mangas',
@@ -20,7 +20,7 @@ export const tasks = [
     },
 
     {
-        id:'2',
+        id:2,
         nombre:'BLEACH: Thousand-Year Blood War',
         img:'https://m.media-amazon.com/images/M/MV5BODFmYTUwYzMtM2M2My00NGExLWIzMDctYmRjNTNhZDc4MGI2XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg',
         categoryId: 'Animes',
@@ -30,7 +30,7 @@ export const tasks = [
     },
 
     {
-        id:'3',
+        id:3,
         nombre:'Iron Man',
         img:'https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/O4NWIPGL6NCY3IFVDUMKE5AFGU.jpg',
         categoryId: 'Figuras',
@@ -39,7 +39,7 @@ export const tasks = [
         stock: 10,
     },
     {
-        id:'4',
+        id:4,
         nombre:'Watchmen',
         img:'https://http2.mlstatic.com/D_NQ_NP_963268-MLA41755243926_052020-O.webp',
         categoryId: 'Comics',

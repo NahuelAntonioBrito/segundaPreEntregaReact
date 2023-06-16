@@ -1,3 +1,5 @@
+import './ItemCount.css';
+
 const { useState } = require("react")
 
 const ItemCount = ({stock, initial, onAdd}) =>{
