@@ -1,3 +1,12 @@
+.card{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    height: 100px;
+    width: 320px;
+}
+
 .imgProd{
     width: 320px;
     height: 340px;
@@ -5,14 +14,16 @@
     border-radius: 20px 20px 0px 0px;
 }
 
-.containerDescrip{
-    height: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
+.CartItemDetails{
+    flex: 1; /* Distribuye el espacio disponible entre los campos */
 }
+
+.CartItemDetails p {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    line-height: 1.5; /* Ajusta la altura de línea para un mejor espaciado */
+}
+
+
 
 .nombreProd{
     padding: 10px;
@@ -34,6 +45,7 @@
     font-size: 17px;
     font-weight: 300;
     cursor:pointer;
+    color: white;
 }
 
 .buttonProd :hover{

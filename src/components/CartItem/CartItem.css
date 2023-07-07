@@ -1,0 +1,32 @@
+.CartItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.CartImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.CartNombre{
+    font-weight: bold;
+}
+
+.CartQuantity{
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.CartPrecio{
+    font-weight: bold;
+}
+
+.CartItem .details > * + * {
+    margin-top: 5px;
+}

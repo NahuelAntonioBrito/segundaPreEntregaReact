@@ -1,11 +1,31 @@
-.Button{
-    padding: 10px;
-    background-color: #263143;
+
+.item-count {
+    display: flex;
+    align-items: center;
+
+}
+
+.Button {
     width: 200px;
     height: 35px;
     border-radius: 10px;
-    border: none;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
-    cursor:pointer;
+    padding: 5px 10px;
+    background-color: #263143;
+    border: none;
+    cursor: pointer;
+}
+
+.ButtonIncrement{
+    padding: 10px;
+    margin: 10px;
+    background-color: #263143;
+    color: green;
+}
+.ButtonDecrement{
+    padding: 10px;
+    margin: 10px;
+    background-color: #263143;
+    color: red;
 }

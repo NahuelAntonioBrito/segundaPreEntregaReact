@@ -3,24 +3,39 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useEffect, useState } from "react"
 import { getTasksById } from "../../services";
 import './ItemDetailContainer.css';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemDetailContainer = () =>{
-    const [task, setTask] = useState();
+    const [item, setItem] = useState(null);
+    const [loading, setloading] = useState(true);
 
     const { id } = useParams()
 
     useEffect(() => {
-        getTasksById(id)
-            .then((response) => {
-                setTask(response);
-            });
-    },[]);
+        setloading(true);
 
-    if (!task) return <div>Cargandoo...</div>
+        const docRef = doc(db, 'Items', id)
+
+        getDoc(docRef)
+            .then(response => {
+                const data = response.data()
+                const itemAdapted = { id: response.id, ...data}
+                setItem(itemAdapted)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setloading(false)
+            })
+    },[ id ]);
+
+    if (!item) return <div>Cargandoo...</div>
 
     return(
         <div className="contenedor">
-            <ItemDetail {...task}/>
+            <ItemDetail {...item}/>
         </div>
     )
 }

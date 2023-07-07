@@ -8,12 +8,14 @@ const Item = ({id, nombre, img, category, detalle, precio, stock}) => {
             <div>
                 <img src={img} alt={nombre} className="imgProd"/>
             </div>
-            <div>
-                <h2 className="nombreProd">{nombre}</h2>
-            </div>
-            <div className="containerDescrip">
-                <p className="precioProd">${precio}</p>
-                <button className="buttonProd" onClick={() => navigate(`/item/${id}`)}>Ver Detalle</button>
+            <div className="CartItemDetails">
+                <div>
+                    <h2 className="nombreProd">{nombre}</h2>
+                </div>
+                <div className="containerDescrip">
+                    <p className="precioProd">${precio}</p>
+                    <button className="buttonProd" onClick={() => navigate(`/item/${id}`)}>Ver Detalle</button>
+                </div>
             </div>
         </div>
     )

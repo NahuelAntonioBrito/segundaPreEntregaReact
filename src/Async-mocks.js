@@ -43,7 +43,7 @@ export const tasks = [
         nombre:'Watchmen',
         img:'https://http2.mlstatic.com/D_NQ_NP_963268-MLA41755243926_052020-O.webp',
         categoryId: 'Comics',
-        detalle:'una guerra fría entre Estados Unidos y la Unión Soviética, una carrera armamentística en la cual los mísiles nucleares pueden acabar con un país entero en cualquier momento. La tensión ante esta situación se refleja en las calles, en las conversaciones de ciertos personajes, y en la locura que supondría si se acabase desatándo una guerra nuclear.',
+        detalle:'Una guerra fría entre Estados Unidos y la Unión Soviética, una carrera armamentística en la cual los mísiles nucleares pueden acabar con un país entero en cualquier momento. La tensión ante esta situación se refleja en las calles, en las conversaciones de ciertos personajes, y en la locura que supondría si se acabase desatándo una guerra nuclear.',
         precio: 6000,
         stock: 10,
     },

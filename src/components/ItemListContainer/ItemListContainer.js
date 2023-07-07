@@ -2,32 +2,44 @@ import React, {useEffect, useState} from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css';
-import { getCategories, getTasks } from "../../services";
 import { Container } from 'react-bootstrap';
-import { NavLink } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemListContainer = () => {
     const { catId } = useParams();
-    const [tasks, setTasks] = useState([]);
-    const [categories, setCategories] = useState([]);
+    const [items, setItems] = useState([]);
+    const [loading, setloading] = useState(true);
 
     useEffect(() => {
-        getTasks(catId).then((data) => {
-            setTasks(data);
-        });
+        setloading(true);
+
+        const collectionRef = catId
+            ? query(collection(db, 'Items'), where('categoryId', '==', catId))
+            : collection(db, 'Items');
+        
+        getDocs(collectionRef)
+            .then(response => {
+                const itemsAdapted = response.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data}
+                })
+                setItems(itemsAdapted)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setloading(false)
+            })
     },[catId]);
-
-    useEffect(() => {
-        getCategories().then((data) => {
-            setCategories(data);
-        });
-    }, []);
-
+    console.log(db)
+    console.log(items)
     return (
         <>
             <h1>Catalogo de Productos</h1>
             <Container className="contenedor">
-                <ItemList prods={tasks}/>
+                <ItemList prods={items}/>
             </Container>
         </>
     )
